@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  php_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    tty: true
+    env_file: ./.env
+    ports:
+      - "8080:80"
+    volumes:
+      - ./endpoints:/var/www/html
+    # environment:
+    #   - MSSQL_HOST=your_remote_mssql_host
+    #   - MSSQL_PORT=your_remote_mssql_port
+    #   - MSSQL_USER=your_remote_mssql_user
+    #   - MSSQL_PASSWORD=your_remote_mssql_password
+    #   - MSSQL_DB=your_remote_mssql_db_name
