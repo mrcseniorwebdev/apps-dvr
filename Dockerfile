@@ -13,11 +13,11 @@ RUN apt-get update && \
     a2enmod rewrite headers
 
 # Enable CORS by updating Apache configuration
-RUN echo '<IfModule mod_headers.c>' >> /etc/apache2/apache2.conf && \
-    echo '    Header set Access-Control-Allow-Origin "*"' >> /etc/apache2/apache2.conf && \
-    echo '    Header set Access-Control-Allow-Methods "GET,POST,OPTIONS,DELETE,PUT"' >> /etc/apache2/apache2.conf && \
-    echo '    Header set Access-Control-Allow-Headers "Content-Type, Authorization"' >> /etc/apache2/apache2.conf && \
-    echo '</IfModule>' >> /etc/apache2/apache2.conf
+# RUN echo '<IfModule mod_headers.c>' >> /etc/apache2/apache2.conf && \
+#     echo '    Header set Access-Control-Allow-Origin "*"' >> /etc/apache2/apache2.conf && \
+#     echo '    Header set Access-Control-Allow-Methods "GET,POST,OPTIONS,DELETE,PUT"' >> /etc/apache2/apache2.conf && \
+#     echo '    Header set Access-Control-Allow-Headers "Content-Type, Authorization"' >> /etc/apache2/apache2.conf && \
+#     echo '</IfModule>' >> /etc/apache2/apache2.conf
 
 # Update PHP configuration to enable error reporting and output errors to stdout/stderr
 RUN echo 'error_reporting = E_ALL' >> /usr/local/etc/php/php.ini && \
