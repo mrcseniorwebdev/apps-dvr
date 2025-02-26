@@ -9,7 +9,7 @@ services:
     tty: true
     env_file: ./.env
     ports:
-      - "8080:80"
+      - "8081:80"
     networks:
       - nginx_network
 
