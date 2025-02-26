@@ -1,0 +1,348 @@
+:root {
+  font-size: 16px;
+}
+body {
+  height: 100vh;
+  margin: 0;
+}
+.login-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.google-login-button {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  background-color: #073378;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.google-login-button:hover {
+  background-color: #09419a;
+  color: #fff;
+  text-decoration: none;
+}
+
+.google-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.google-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.button-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-detials {
+  display: flex;
+  column-gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 0;
+}
+.user-detials p {
+  margin: 0;
+}
+.user-detials .logout {
+  color: red;
+  font-weight: bold;
+}
+
+.content .database {
+  margin-top: 20px;
+}
+table.dataTable {
+  margin-left: 0;
+}
+.navbar {
+  margin-bottom: 0;
+}
+#second-nav {
+  background-color: white;
+  border-color: white;
+}
+.btn-group.noID {
+  margin-bottom: 5px;
+}
+.btn-group.noID i {
+  vertical-align: initial;
+  margin-right: 3px;
+  width: 13px;
+}
+.modal .modal-body .form-control {
+  margin-bottom: 10px;
+}
+.recordComments {
+  float: right;
+}
+.process {
+  display: none;
+}
+.editButton,
+.deleteButton {
+  cursor: pointer;
+  text-decoration: none;
+}
+#addLoading,
+#editLoading,
+#deleteLoading {
+  display: none;
+}
+.processFailure {
+  font-weight: bold;
+  font-size: 18px;
+}
+.ui-autocomplete-loading {
+  background: white url("../images/ui-anim_basic_16x16.gif") right center
+    no-repeat;
+}
+
+/****************** Loading Bar ******************/
+.warningGradientOuterBarG {
+  height: 19px;
+  width: 156px;
+  border: 1px solid rgb(0, 0, 0);
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  background: gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgb(255, 255, 255)),
+    to(rgb(0, 0, 0))
+  );
+  background: -o-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgb(255, 255, 255)),
+    to(rgb(0, 0, 0))
+  );
+  background: -ms-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgb(255, 255, 255)),
+    to(rgb(0, 0, 0))
+  );
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgb(255, 255, 255)),
+    to(rgb(0, 0, 0))
+  );
+  background: -moz-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgb(255, 255, 255)),
+    to(rgb(0, 0, 0))
+  );
+  background: linear-gradient(top, rgb(255, 255, 255), rgb(0, 0, 0));
+  background: -o-linear-gradient(top, rgb(255, 255, 255), rgb(0, 0, 0));
+  background: -ms-linear-gradient(top, rgb(255, 255, 255), rgb(0, 0, 0));
+  background: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(0, 0, 0));
+  background: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(0, 0, 0));
+}
+.warningGradientBarLineG {
+  background-color: rgb(255, 255, 255);
+  float: left;
+  width: 14px;
+  height: 117px;
+  margin-right: 23px;
+  margin-top: -27px;
+  transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+.warningGradientAnimationG {
+  width: 230px;
+  animation-name: warningGradientAnimationG;
+  -o-animation-name: warningGradientAnimationG;
+  -ms-animation-name: warningGradientAnimationG;
+  -webkit-animation-name: warningGradientAnimationG;
+  -moz-animation-name: warningGradientAnimationG;
+  animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  -ms-animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+@keyframes warningGradientAnimationG {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -37px;
+  }
+}
+@-o-keyframes warningGradientAnimationG {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -37px;
+  }
+}
+@-ms-keyframes warningGradientAnimationG {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -37px;
+  }
+}
+@-webkit-keyframes warningGradientAnimationG {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -37px;
+  }
+}
+@-moz-keyframes warningGradientAnimationG {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -37px;
+  }
+}
+
+.dataTables_wrapper .dataTables_processing {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin-top: -30px;
+  margin: 30px auto;
+  padding: 3em;
+  text-align: center;
+  font-size: 1.8em;
+  background: rgba(0, 0, 0, 0.2);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, rgba(255, 255, 255, 0)),
+    color-stop(25%, rgba(255, 255, 255, 0.9)),
+    color-stop(75%, rgba(255, 255, 255, 0.9)),
+    color-stop(100%, rgba(255, 255, 255, 0))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9) 25%,
+    rgba(255, 255, 255, 0.9) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9) 25%,
+    rgba(255, 255, 255, 0.9) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9) 25%,
+    rgba(255, 255, 255, 0.9) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9) 25%,
+    rgba(255, 255, 255, 0.9) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9) 25%,
+    rgba(255, 255, 255, 0.9) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border: solid 1px rgba(0, 0, 0, 0.35);
+}
+
+.panel-show .form-group {
+  margin-bottom: 0;
+}
+
+.dataTable tr.group,
+.dataTable tr.group:hover {
+  background-color: #ddd !important;
+}
+
+.twitter-typeahead {
+  top: -6px;
+}
+
+.tt-hint {
+  color: #999;
+}
+
+.tt-menu {
+  width: auto;
+  min-width: 200px;
+  margin-top: 4px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  /* UPDATE: newer versions use .tt-suggestion.tt-cursor */
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+#ui-datepicker-div {
+  top: 170px;
+}
