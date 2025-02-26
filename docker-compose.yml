@@ -12,6 +12,7 @@ services:
       - "8080:80"
     volumes:
       - ./endpoints:/var/www/html
+      # - ./freetds.conf:/etc/freetds/freetds.conf
     networks:
       - nginx_network
 

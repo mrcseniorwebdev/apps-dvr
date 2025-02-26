@@ -2,19 +2,18 @@
 // Setup variables
 $output = "";
 // DBASE info
-$host = $_ENV['HOST'];
-$port = $_ENV['PORT'];
-$dbname = $_ENV['DBNAME'];
-$user = $_ENV['USER'];
-$pass = $_ENV['PASS'];
-// $host = "dvr-mssql2.cy9fa96f4hrh.us-east-1.rds.amazonaws.com";
-// $port = 1433;
-// $dbname = "dvr";
-// $user = "jyeager";
-// $pass = "Laminar22";
+$host = $_ENV['MSSQLHOST'];
+$port = $_ENV['MSSQLPORT'];
+$dbname = $_ENV['MSSQLDBNAME'];
+$user = $_ENV['MSSQLUSER'];
+$pass = $_ENV['MSSQLPASS'];
+error_log(print_r("dblib:host=$host:$port;dbname=$dbname", true));
+error_log(print_r($user, true));
+error_log(print_r($pass, true));
 
 try {
-  $DBH = new PDO("dblib:host=$host:$port;dbname=$dbname", $user, $pass, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+  $DBH = new PDO("dblib:version=8.0;charset=UTF-8;host=$host:$port;dbname=$dbname", $user, $pass, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+  // $DBH = new PDO("sqlsrv:Server=$host,$port;Database=$dbname", $user, $pass, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 
   // $DBH = new PDO("sqlsrv:server=$host,$port;Database=$dbname", $user, $pass, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
   //$DBH->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
